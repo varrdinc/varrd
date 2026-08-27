@@ -3,6 +3,7 @@ name: Publish to PyPI
 on:
   release:
     types: [published]
+  workflow_dispatch:  # manual run = safe OIDC-binding test (duplicate version can never re-upload)
 
 jobs:
   build:
