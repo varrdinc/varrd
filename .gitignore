@@ -7,3 +7,8 @@ build/
 .mcpregistry_*
 .mcpregistry_github_token
 .mcpregistry_registry_token
+mcp-publisher.exe
+mcp-publisher.tar.gz
+vscode-extension/node_modules/
+vscode-extension/out/
+*.vsix

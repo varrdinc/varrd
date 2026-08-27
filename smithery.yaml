@@ -1,3 +1,10 @@
+name: "VARRD — Statistically Validated Trading Edges"
+description: >
+  Live trading edge library across futures, equities, and crypto. See which
+  edges are firing right now, get entry/stop/target prices, or test any trading
+  idea with real market data and institutional-grade backtesting. Full audit trail
+  on every edge. Built by a team from one of the most successful derivatives firms
+  in Chicago.
 startCommand:
   type: http
   url: https://app.varrd.com/mcp
@@ -9,7 +16,7 @@ startCommand:
         title: API Key (optional)
         description: >
           Your VARRD agent token for reconnecting an existing account.
-          Leave empty — VARRD creates an agent identity automatically.
+          Leave empty — VARRD auto-creates an agent identity.
           Sign up at app.varrd.com for $2 in free credits, or add
           credits via the buy_credits tool.
         default: ""

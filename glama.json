@@ -1,10 +1,10 @@
 {
   "$schema": "https://glama.ai/mcp/schemas/server.json",
-  "name": "varrd",
-  "description": "The governed live edge layer. Browse validated trading edges firing in real time, or test your own ideas with institutional-grade statistical methodology. Full transparency — every edge shows its formula, methodology, post-discovery performance, and audit trail.",
+  "name": "varrd — statistically validated trading edges",
+  "description": "Live trading edge library across futures, equities, and crypto — see which edges are firing right now, get entry/stop/target prices, or test any trading idea with real market data and institutional-grade backtesting. Full audit trail on every edge: formula, methodology, post-discovery performance, Monte Carlo, regime analysis, edge decay. Built by a team from one of the most successful derivatives firms in Chicago.",
   "homepage": "https://www.varrd.com",
   "license": "MIT",
-  "repository": "https://github.com/augiemazza/varrd",
+  "repository": "https://github.com/varrdinc/varrd",
   "maintainers": [
     "augiemazza"
   ],

@@ -40,7 +40,7 @@ Returns the current credit balance in cents, whether billing enforcement is enab
 
 Direct the user to purchase more at [app.varrd.com](https://app.varrd.com). Credit packs: $5 / $20 / $50.
 
-New accounts start with $2.00 in free credits (~10-20 research queries).
+Signing up at [app.varrd.com](https://app.varrd.com) grants $2.00 in free credits (~10-20 research queries) — link your agent to that account to use them. Agent accounts created directly via MCP/CLI start at $0.
 
 ## Cost
 

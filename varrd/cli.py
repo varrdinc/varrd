@@ -316,7 +316,7 @@ def _print_welcome():
   {BOLD}AI agent?{RESET} Run: varrd agent-instructions
 
   MCP (recommended for AI): https://app.varrd.com/mcp
-  Docs: https://github.com/augiemazza/varrd
+  Docs: https://github.com/varrdinc/varrd
 """)
 
 

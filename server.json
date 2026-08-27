@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.augiemazza/varrd",
-  "title": "VARRD — Validated Trading Edge Library + AI Research",
-  "description": "The governed live edge layer. Browse validated trading edges firing right now, or test your own ideas with institutional-grade statistical methodology. Futures, equities, crypto.",
-  "version": "1.0.4",
+  "name": "io.github.varrdinc/varrd",
+  "title": "VARRD — Statistically Validated Trading Edges + AI Research Engine",
+  "description": "Validated trading edges across futures, equities, crypto. Live signals, full audit trail.",
+  "version": "1.0.5",
   "websiteUrl": "https://www.varrd.com",
   "icons": [
     {
@@ -12,7 +12,7 @@
     }
   ],
   "repository": {
-    "url": "https://github.com/augiemazza/varrd",
+    "url": "https://github.com/varrdinc/varrd",
     "source": "github"
   },
   "remotes": [
