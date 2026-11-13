@@ -10,8 +10,8 @@ grade methodology.
 
 YOUR COMMANDS:
 
-1. varrd edges [--depth 0|1|2] [--edge-id ID] [--market ES] [--status firing]
-               [--direction LONG|SHORT] [--timeframe daily] [--asset-class futures]
+1. varrd edges [--depth 0|1|2] [--edge-id ID] [--market SPY] [--status firing]
+               [--direction LONG|SHORT] [--timeframe daily] [--asset-class equities]
    Browse VARRD's validated edge library. The main command.
      depth=0 (free):  Which markets have edges firing right now
      depth=1 ($0.50): 15-min snapshot — direction, win rate, EV, stops, entry date
@@ -19,23 +19,23 @@ YOUR COMMANDS:
 
    Filters: market, status (firing/pending/active), direction (LONG/SHORT),
    timeframe (60min/120min/240min/360min/480min/daily/weekly),
-   asset_class (futures/equities/crypto)
+   asset_class (equities/crypto)
 
 2. varrd research "<idea>"
    Multi-turn research conversation. VARRD auto-follows the workflow:
    idea -> chart -> test -> trade setup. Usually completes in 3-5 turns.
 
    Examples:
-     varrd research "When RSI drops below 25 on ES, is there a bounce?"
-     varrd research "What happens to gold when silver ETFs make 100-day new lows?"
-     varrd research "Use the ELROND council on NQ"
+     varrd research "When RSI drops below 25 on SPY, is there a bounce?"
+     varrd research "What happens to GLD when silver ETFs make 100-day new lows?"
+     varrd research "Use the ELROND council on QQQ"
 
 3. varrd discover "<topic>"
    Fully autonomous. VARRD generates a hypothesis, loads data, charts,
    tests, and gets trade setup if an edge is found. One command, one result.
 
    Examples:
-     varrd discover "momentum on grains"
+     varrd discover "momentum on semiconductors"
      varrd discover "mean reversion on crypto" --mode explore
 
 4. varrd briefing
@@ -43,7 +43,7 @@ YOUR COMMANDS:
    Connects today's headlines to your specific positions and edges.
    Requires 5+ strong edges in your library.
 
-5. varrd search "<query>" [--market ES] [--limit 10]
+5. varrd search "<query>" [--market SPY] [--limit 10]
    Find your saved strategies by keyword or natural language.
 
 6. varrd hypothesis <id>
@@ -83,10 +83,9 @@ HOW TO BE EFFICIENT:
 - Morning briefing -> varrd briefing
 
 DATA COVERAGE:
-- Futures (CME): ES, NQ, CL, GC, SI, ZW, ZC, ZS, ZB, TY, HG, NG + more
-  1h through weekly, back to 1985
 - Stocks/ETFs: Any US equity (12,600+ tickers) — 1h through weekly
 - Crypto (Binance): BTC, ETH, SOL + more — 1h through weekly
+- For index, rates, energy or metals exposure use the ETF: SPY, QQQ, DIA, IWM, TLT, IEF, USO, UNG, GLD, SLV
 
 CREDITS & PAYMENT:
   Sign up at app.varrd.com to get $2.00 in free credits.

@@ -44,9 +44,9 @@
 
 ## Two ways to use VARRD
 
-**1. Tell your AI.** Add the MCP config below, then ask: *"What VARRD edges are firing right now?"* or *"What happens to gold when silver ETFs are making 100-day new lows?"* Your AI browses the edge library, shows you what's actionable, and can test any idea you throw at it.
+**1. Tell your AI.** Add the MCP config below, then ask: *"What VARRD edges are firing right now?"* or *"What happens to GLD when silver ETFs are making 100-day new lows?"* Your AI browses the edge library, shows you what's actionable, and can test any idea you throw at it.
 
-**2. Use the web app.** Go to [app.varrd.com](https://app.varrd.com), sign up, and do the same thing — browse the edge library, ask questions like *"Is there a seasonal pattern in wheat before harvest?"*, and watch the full research pipeline run visually.
+**2. Use the web app.** Go to [app.varrd.com](https://app.varrd.com), sign up, and do the same thing — browse the edge library, ask questions like *"Is there a seasonal pattern in retail stocks before the holidays?"*, and watch the full research pipeline run visually.
 
 ```json
 {
@@ -66,7 +66,7 @@ VARRD turns trading ideas into quantitative formulas using a domain-specific lan
 
 The AI generates hypotheses. **A purpose-built backtesting engine does the math.** The AI never calculates statistics, never fabricates results, and never touches the numbers. Every stat comes from a deterministic computation running in a sandboxed kernel. This matters because most people's first question is: *"How do I know the AI isn't just making this up?"* It can't. The engine is separate from the model.
 
-VARRD also maintains a growing library of validated edges — patterns that survived the full testing gauntlet — running 24/7 against live market data across futures, equities, and crypto. When an edge fires, you get exact entry, stop, target, hold period, and the complete audit trail of how it was discovered, tested, and validated.
+VARRD also maintains a growing library of validated edges — patterns that survived the full testing gauntlet — running 24/7 against live market data across US stocks, ETFs, and crypto. When an edge fires, you get exact entry, stop, target, hold period, and the complete audit trail of how it was discovered, tested, and validated.
 
 ---
 
@@ -115,8 +115,8 @@ VARRD Edge Library — 3 firing, 12 pending bar close, 35 in active trades
 
 FIRING (actionable now):
   AAPL daily — 798c0e5f-4c71-453c-a168-fc3b0771e506
-  Crude Oil daily — 9d713707-4548-462e-a787-676e56ec3a0b
-  Gold daily — 081ab7f2-edfb-4f74-add8-6fc90aca3561
+  NVDA daily — <edge id>
+  BTC daily — <edge id>
 
 $0.50: unlock direction, win rate, EV, stop/target, entry date for ALL edges (depth=1)
 $1/edge or $5/all: full formula, methodology, performance analytics (depth=2)
@@ -127,9 +127,9 @@ $1/edge or $5/all: full formula, methodology, performance analytics (depth=2)
 Unlocks direction, win rate, EV, stops, entry date, and hold period for every firing, pending, and active edge. This is a 15-minute window — a snapshot of what's live right now.
 
 ```
-  NQ daily LONG | FIRING — enter 2026-05-04 OPEN
-    64% win | 0.51 EV | 1419 signals | stop $27,200 target $29,785 | hold 10
-    "NQ 13-day ROC positive 5 days then declining, weekly RSI > 55"
+  AAPL daily LONG | FIRING — enter <date> OPEN
+    <win %> win | <EV> EV | <n> signals | stop <price> target <price> | hold <bars>
+    "<the edge's formula, in plain words>"
 ```
 
 ### $1/edge — full audit trail
@@ -180,16 +180,16 @@ v = VARRD()
 edges = v.edges()                              # free — which markets are firing
 edges = v.edges(depth=1)                       # $0.50 — snapshot with stats + levels
 edges = v.edges(depth=1, direction="SHORT")    # filter by direction
-edges = v.edges(depth=1, asset_class="futures") # filter by asset class
+edges = v.edges(depth=1, asset_class="crypto")  # filter by asset class
 edges = v.edges(depth=2, edge_id="abc123")     # $1 — full audit trail
 
 # Research your own ideas
-r = v.research("When RSI drops below 25 on ES, is there a bounce?")
+r = v.research("When RSI drops below 25 on SPY, is there a bounce?")
 r = v.research("test it", session_id=r.session_id)
 print(r.context.edge_verdict)  # "STRONG EDGE" / "NO EDGE"
 
 # Autonomous discovery
-result = v.discover("mean reversion on futures")
+result = v.discover("mean reversion on tech stocks")
 
 # Morning briefing
 b = v.briefing()
@@ -203,7 +203,7 @@ varrd edges                                    # free — which markets are firi
 varrd edges --depth 1                          # $0.50 — snapshot with stats + levels
 varrd edges --depth 2 --edge-id abc123         # $1 — full audit trail
 varrd research "Does buying SPY after 3 down days work?"
-varrd discover "momentum on grains"
+varrd discover "momentum on semiconductors"
 varrd briefing
 ```
 
@@ -215,15 +215,15 @@ These are real things you can ask. VARRD loads the data, builds the formula, tes
 
 > *"Is there an edge to going long Starbucks on their Red Cup Day?"*
 
-> *"What happens to gold futures when yen and 10-year bonds make 20-day new highs on the same day?"*
+> *"What happens to GLD when the yen ETF (FXY) and long bonds (TLT) make 20-day new highs on the same day?"*
 
-> *"Take a look at crude oil on a 240-minute timeframe right now — diagnose how it's acting and let's find every time it's happened in the past and if there's an edge."*
+> *"Take a look at USO on a 60-minute timeframe right now — diagnose how it's acting and let's find every time it's happened in the past and if there's an edge."*
 
 > *"Does it test out to short fast food companies during Lent?"*
 
 > *"What happens to Bitcoin after a halving event?"*
 
-> *"When corn and soybeans diverge by more than 2 standard deviations, is there a mean reversion trade?"*
+> *"When the corn and soybean ETFs (CORN, SOYB) diverge by more than 2 standard deviations, is there a mean reversion trade?"*
 
 Every question becomes a hypothesis, gets charted with real data, statistically tested with proper guardrails (Bonferroni correction, K-tracking, lookahead verification), and produces a clear verdict: edge or no edge. Both answers are valuable.
 
@@ -233,7 +233,6 @@ Every question becomes a hypothesis, gets charted with real data, statistically 
 
 | Asset Class | Markets | Timeframes |
 |-------------|---------|------------|
-| **Futures (CME)** | 35 markets (ES, NQ, CL, GC, SI, ZC, ZW, NG, ...) | 1h through weekly, back to 1985 |
 | **Equities** | Any US stock or ETF (12,600+ tickers) | 1h through weekly |
 | **Crypto** | BTC, ETH, SOL and more | 1h through weekly |
 

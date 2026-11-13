@@ -1,6 +1,6 @@
 name: "VARRD — Statistically Validated Trading Edges"
 description: >
-  Live trading edge library across futures, equities, and crypto. See which
+  Live trading edge library across US stocks, ETFs, and crypto. See which
   edges are firing right now, get entry/stop/target prices, or test any trading
   idea with real market data and institutional-grade backtesting. Full audit trail
   on every edge. Built by a team from one of the most successful derivatives firms

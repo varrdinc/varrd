@@ -31,7 +31,7 @@ varrd hypothesis hyp_abc123
 
 | Field | Description |
 |-------|-------------|
-| **Name** | Strategy name (e.g. "RSI Oversold ES Daily") |
+| **Name** | Strategy name (e.g. "RSI Oversold SPY Daily") |
 | **Formula** | The boolean pattern expression |
 | **Market** | Primary market tested on |
 | **Direction** | LONG or SHORT |

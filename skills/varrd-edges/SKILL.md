@@ -39,7 +39,7 @@ Complete methodology: formula, discovery story, per-horizon results, SQN, profit
 varrd edges --depth 1 --direction SHORT           # only shorts
 varrd edges --depth 1 --asset-class equities       # only stocks/ETFs
 varrd edges --depth 1 --timeframe 240min           # only 4-hour edges
-varrd edges --depth 1 --market GC                  # only gold
+varrd edges --depth 1 --market GLD                 # only GLD
 varrd edges --depth 1 --status firing              # only actionable now
 ```
 
