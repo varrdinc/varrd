@@ -44,7 +44,7 @@ There's also portfolio backtesting for combining multiple strategies into a book
 
 - **Edge found** — ask for the trade setup to get exact entry, stop-loss, and take-profit prices computed against current market data
 - **No edge but close** — tweak the formula, try different horizons, adjust entry timing, and test again
-- **No edge, move on** — start a new hypothesis and keep exploring. This is the most common outcome and it's valuable — you ruled something out for 25 cents instead of $25,000 in live losses
+- **No edge, move on** — start a new hypothesis and keep exploring. This is the most common outcome and it's valuable — you ruled something out for a dollar instead of $25,000 in live losses
 
 The cycle continues: idea → chart → validate → test → interpret → next idea. Each round gets you closer to a real edge or confirms there isn't one.
 
@@ -100,7 +100,7 @@ Each turn prints response text and any widgets (charts, test results, trade setu
 
 ## Cost
 
-~20-30 cents per complete workflow (idea through validated trade setup). ELROND council calls cost ~40-60 cents. Multi-market (3+ markets) can reach ~$1.
+$1.00 per completed test (an event study, backtest, retest, or stop optimization). Charts, data queries, conversation, and identical reruns are free. Run `varrd balance` to see tests remaining.
 
 ## Python SDK Equivalent
 

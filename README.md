@@ -244,11 +244,13 @@ Every question becomes a hypothesis, gets charted with real data, statistically 
 | Tool | What it does |
 |------|-------------|
 | `varrd_edges` | Browse the validated edge library with filters |
-| `varrd_ai` | Multi-turn research — test any trading idea |
+| `varrd_ai` | Multi-turn research — test any stock, ETF or crypto idea |
+| `prediction_ai` | The same engine on Kalshi / Polymarket / sports markets |
 | `autonomous_varrd_ai` | Autonomous discovery — VARRD finds edges for you |
+| `prediction_edges` | Your saved prediction edges (free, read-only) |
 | `search` | Search your saved strategies |
 | `get_hypothesis` | Full detail on your own strategy |
-| `check_balance` | Credit balance + auto-detects completed payments |
+| `check_balance` | Tests remaining, balance, plan + auto-detects completed payments |
 | `buy_credits` | Card (Stripe Checkout) or USDC on Base (autonomous) |
 | `get_briefed` | Personalized market news tied to your edge library |
 | `reset_session` | Kill a stuck research session |
@@ -263,10 +265,18 @@ Every question becomes a hypothesis, gets charted with real data, statistically 
 | Snapshot: stats + trade levels on all active edges | $0.50 | 15 minutes |
 | Full audit trail on one edge | $1 | Permanent |
 | Full audit trail on every edge | $5 | 15 minutes |
-| Research your own ideas | ~$0.25 | Per query |
-| Autonomous discovery | ~$1 | Per idea |
+| Research your own ideas (`varrd_ai`, `prediction_ai`) | $1.00 | Per completed test |
+| Autonomous discovery | $1.00 | Per test it runs |
 
-Sign up at [app.varrd.com](https://app.varrd.com) for $2 in free credits.
+A **test** is an event study, backtest, retest, or stop optimization. Charts, data queries, conversation, and identical reruns are free.
+
+| Plan | Price | Includes | After that |
+|------|-------|----------|------------|
+| No plan | Prepaid packs: $20 / $50 / $200 | — | $1.00 per test |
+| Starter | $50 / month | 50 tests + 20 watched strategies | $1.00 per test |
+| Pro | $300 / month | 300 tests + 100 watched strategies | $0.75 per test |
+
+Sign up at [app.varrd.com](https://app.varrd.com) for 3 free tests. Run `varrd balance` (or `check_balance`) to see tests remaining.
 
 ---
 

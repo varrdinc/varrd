@@ -306,7 +306,7 @@ def _print_welcome():
     briefing               Personalized market news (uses your edge library)
     search <query>         Find saved strategies
     hypothesis <id>        Get strategy details
-    balance                Check credits
+    balance                Tests left, balance, plan
     buy-credits            Buy credits ($5 min, card or crypto)
     auth status|clear      Manage authentication
 
@@ -393,7 +393,7 @@ def main():
     sub = parser.add_subparsers(dest="command", help="Command")
 
     # balance
-    sub.add_parser("balance", help="Check credit balance")
+    sub.add_parser("balance", help="Check tests left, balance and plan")
 
     # edges
     p_edges = sub.add_parser("edges", help="Browse VARRD's validated edge library")

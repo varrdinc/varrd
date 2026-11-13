@@ -17,6 +17,6 @@ startCommand:
         description: >
           Your VARRD agent token for reconnecting an existing account.
           Leave empty — VARRD auto-creates an agent identity.
-          Sign up at app.varrd.com for $2 in free credits, or add
+          Sign up at app.varrd.com for 3 free tests, or add
           credits via the buy_credits tool.
         default: ""

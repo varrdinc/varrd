@@ -50,7 +50,7 @@ YOUR COMMANDS:
    Full details for one of your own strategies.
 
 7. varrd balance
-   Check credit balance. Free, no credits consumed.
+   Check tests remaining, balance and plan. Free, no credits consumed.
    Also auto-detects completed payments — call after paying to confirm.
 
 8. varrd buy-credits [--amount 500]
@@ -89,23 +89,25 @@ DATA COVERAGE:
 - Crypto (Binance): BTC, ETH, SOL + more — 1h through weekly
 
 CREDITS & PAYMENT:
-  Sign up at app.varrd.com to get $2.00 in free credits.
+  Sign up at app.varrd.com to get 3 free tests.
   MCP-only agents start with $0 — use buy-credits to add funds.
   varrd edges depth=0, search, hypothesis, balance are FREE.
   varrd edges depth=1 costs $0.50, depth=2 costs $1/edge or $5/all.
-  Research costs ~$0.25/query. Autonomous discovery ~$1/idea.
+  Research and autonomous discovery cost $1.00 per completed test (event study,
+  backtest, retest, stop optimization). Charts, data, conversation and identical
+  reruns are FREE. Plans: Starter $50/mo (50 tests), Pro $300/mo (300 tests).
 
 AUTHENTICATION:
   First call auto-creates an agent identity. Credentials saved to
   ~/.varrd/credentials. Your passkey (VARRD-XXXX...) is printed once
   on first use — SAVE IT.
 
-  GET $2 FREE (takes ~1 minute):
+  GET 3 FREE TESTS (takes ~1 minute):
     1. Sign up at https://app.varrd.com (verify email)
     2. Click avatar (top right) -> Manage Agents
     3. Copy the MCP config JSON shown there
     4. Paste into your MCP client config (e.g. claude_desktop_config.json)
-    5. Restart — your agent now has $2 free credits and full account access
+    5. Restart — your agent now has 3 free tests and full account access
 
   MERGE AN EXISTING AGENT (if you already used VARRD without signing up):
     1. Sign in at https://app.varrd.com

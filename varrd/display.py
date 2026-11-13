@@ -73,6 +73,12 @@ def _safe(text: str) -> str:
 
 def display_balance(result: BalanceResult):
     bal = result.balance_cents / 100
+    if result.tests_remaining is not None:
+        print(f"  {BOLD}Tests left:{RESET}  {GREEN}{result.tests_remaining}{RESET}")
+    if result.plan:
+        print(f"  {BOLD}Plan:{RESET}        {result.plan}")
+    if result.test_price_cents is not None:
+        print(f"  {BOLD}Per test:{RESET}    ${result.test_price_cents / 100:.2f}")
     print(f"  {BOLD}Balance:{RESET}     {GREEN}${bal:.2f}{RESET}")
     print(f"  {BOLD}Enforcement:{RESET} {'ON' if result.enforcement_enabled else 'OFF (tracking only)'}")
     if result.lifetime_added_cents is not None:
