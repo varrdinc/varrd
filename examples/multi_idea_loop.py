@@ -9,11 +9,11 @@ from varrd import VARRD
 v = VARRD()
 
 ideas = [
-    "RSI oversold reversals on ES",
-    "Momentum breakouts on gold",
+    "RSI oversold reversals on SPY",
+    "Momentum breakouts on GLD",
     "Mean reversion after VIX spikes",
-    "Seasonal patterns in wheat",
-    "Volume surge breakdowns on NQ",
+    "Seasonal patterns in retail stocks",
+    "Volume surge breakdowns on QQQ",
 ]
 
 print(f"Testing {len(ideas)} ideas...\n")

@@ -26,10 +26,10 @@ Each call tests ONE hypothesis through the full pipeline. Call again for another
 ## Examples
 
 ```bash
-varrd discover "momentum on grains"
+varrd discover "momentum on semiconductors"
 varrd discover "mean reversion on crypto" --mode explore
-varrd discover "volatility clustering on ES" --markets ES NQ
-varrd discover "seasonal patterns in energy" --test-type backtest
+varrd discover "volatility clustering on SPY" --markets SPY QQQ
+varrd discover "seasonal patterns in energy stocks" --test-type backtest
 ```
 
 ## Options
@@ -37,7 +37,7 @@ varrd discover "seasonal patterns in energy" --test-type backtest
 | Flag | Values | Default | Description |
 |------|--------|---------|-------------|
 | `--mode` | `focused`, `explore` | `focused` | focused = stay close to topic, explore = creative freedom |
-| `--markets` | e.g. `ES NQ CL` | auto | Focus on specific markets |
+| `--markets` | e.g. `SPY QQQ USO` | auto | Focus on specific markets |
 | `--test-type` | `event_study`, `backtest`, `both` | `event_study` | Type of statistical test |
 
 ## When to Use discover vs research

@@ -12,8 +12,8 @@ print(result.text)
 result = v.edges(depth=1)
 print(result.text)
 
-# Filter: only short setups on futures
-result = v.edges(depth=1, direction="SHORT", asset_class="futures")
+# Filter: only short setups on crypto
+result = v.edges(depth=1, direction="SHORT", asset_class="crypto")
 print(result.text)
 
 # Full audit trail on a specific edge ($1)

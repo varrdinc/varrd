@@ -15,7 +15,7 @@ Use this skill when a user wants to find strategies in their library by topic, k
 
 ```bash
 varrd search "<query>"
-varrd search "RSI oversold" --market ES
+varrd search "RSI oversold" --market SPY
 varrd search "momentum strategies" --limit 5
 ```
 
@@ -27,7 +27,7 @@ Searches all saved strategies using keyword and semantic matching. Returns match
 
 | Flag | Description |
 |------|-------------|
-| `--market ES` | Filter results to a specific market |
+| `--market SPY` | Filter results to a specific market |
 | `--limit N` | Max results to return (default 10) |
 
 ## Examples
@@ -35,8 +35,8 @@ Searches all saved strategies using keyword and semantic matching. Returns match
 ```bash
 varrd search "momentum strategies"
 varrd search "RSI oversold"
-varrd search "corn seasonal"
-varrd search "mean reversion" --market ES
+varrd search "retail seasonal"
+varrd search "mean reversion" --market SPY
 varrd search "volatility" --limit 20
 ```
 
@@ -52,7 +52,7 @@ Each result includes:
 
 ## Tips
 
-- Use natural language: "strategies that work on crude oil" works just as well as "CL"
+- Use natural language: "strategies that work on oil stocks" works just as well as "USO"
 - Use the hypothesis ID from results with `varrd hypothesis <id>` for full details
 - Search is **free** — no credits consumed
 
@@ -65,7 +65,7 @@ Free. No credits consumed.
 ```python
 from varrd import VARRD
 v = VARRD()
-results = v.search("momentum on grains", limit=5)
+results = v.search("momentum on semiconductors", limit=5)
 for r in results.results:
     print(f"{r.name} ({r.market}) — edge: {r.has_edge}, WR: {r.win_rate}")
 ```

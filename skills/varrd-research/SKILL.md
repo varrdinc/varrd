@@ -23,7 +23,7 @@ varrd research "<your trading idea>"
 
 A research session follows a natural progression:
 
-**1. You bring an idea.** This can be a specific hypothesis ("When RSI drops below 25 on ES, is there a bounce?"), a broad question ("What happens to crude when weekly inventory draws exceed expectations?"), or a request for idea generation ("Use the ELROND council on NQ" — 8 specialist investigators each trained on different systematic trading frameworks).
+**1. You bring an idea.** This can be a specific hypothesis ("When RSI drops below 25 on SPY, is there a bounce?"), a broad question ("What happens to oil stocks when weekly inventory draws exceed expectations?"), or a request for idea generation ("Use the ELROND council on QQQ" — 8 specialist investigators each trained on different systematic trading frameworks).
 
 **2. VARRD charts the pattern.** It loads real market data, builds the indicators, evaluates the formula, and shows you exactly where the pattern fired on a real price chart with signal count. You review it — does this look right? Are the signals where you'd expect them?
 
@@ -34,7 +34,7 @@ A research session follows a natural progression:
 | Test Type | What It Does | When It's Used |
 |-----------|-------------|----------------|
 | **Single Event Study** | Forward return analysis on one market at multiple time horizons | Default for one market — "does price go up or down after this signal?" |
-| **Parallel Event Study** | Same pattern tested independently on 2-5 markets, per-market results | "Does this work on ES, NQ, and CL?" |
+| **Parallel Event Study** | Same pattern tested independently on 2-5 markets, per-market results | "Does this work on SPY, QQQ, and USO?" |
 | **Batch Event Study** | Same pattern pooled across 6+ markets into one aggregate result | Broad screen — "does this work across all metals?" |
 | **Backtest Strategy** | Full simulation with stop-loss, take-profit, equity curve, drawdown, in-sample and sacred one-shot out-of-sample validation | When you want to simulate actually trading it as a system |
 
@@ -73,11 +73,11 @@ These are the same controls that institutional quant firms enforce internally. T
 ## Examples
 
 ```bash
-varrd research "When RSI drops below 25 on ES, is there a bounce?"
-varrd research "Use the ELROND council on NQ"
-varrd research "When wheat drops 3 consecutive days after monthly highs, is there a snap-back?"
-varrd research "Load TLT and CL. When bonds sell off for a week, does crude follow?"
-varrd research "What happens to gold when the VIX spikes above 30?"
+varrd research "When RSI drops below 25 on SPY, is there a bounce?"
+varrd research "Use the ELROND council on QQQ"
+varrd research "When NVDA drops 3 consecutive days after monthly highs, is there a snap-back?"
+varrd research "Load TLT and USO. When bonds sell off for a week, does oil follow?"
+varrd research "What happens to GLD when the VIX spikes above 30?"
 ```
 
 ## Reading the Output
@@ -92,8 +92,8 @@ Each turn prints response text and any widgets (charts, test results, trade setu
 
 ## Tips
 
-- Be specific: "When wheat drops 3 consecutive days after new monthly highs, is there a snap-back?" beats "find patterns in wheat"
-- Cross-market ideas work: "Load TLT and CL. When bonds sell off for a week, does crude follow?"
+- Be specific: "When NVDA drops 3 consecutive days after new monthly highs, is there a snap-back?" beats "find patterns in NVDA"
+- Cross-market ideas work: "Load TLT and USO. When bonds sell off for a week, does oil follow?"
 - Use the ELROND council for idea generation — 8 specialists (momentum, volatility, regime, chartist, flow, seasonality, quant, cross-market) each return calibrated formulas
 - "No edge" is the most common outcome and it's valuable. Move on, test the next idea.
 - Use `--max-turns 20` for complex research that needs more steps
@@ -107,7 +107,7 @@ Each turn prints response text and any widgets (charts, test results, trade setu
 ```python
 from varrd import VARRD
 v = VARRD()
-r = v.research("When RSI drops below 25 on ES, is there a bounce?")
+r = v.research("When RSI drops below 25 on SPY, is there a bounce?")
 r = v.research("test it", session_id=r.session_id)
 r = v.research("show me the trade setup", session_id=r.session_id)
 ```

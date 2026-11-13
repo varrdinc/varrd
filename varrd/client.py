@@ -13,15 +13,15 @@ Usage:
     v.edges(depth=2, edge_id="abc123")   # full methodology ($1)
     v.buy_credits()                      # Stripe Checkout link (card)
     v.buy_credits(payment_method="crypto")  # USDC on Base (autonomous)
-    v.search("momentum on grains")
+    v.search("momentum on semiconductors")
     v.get_hypothesis("hyp_abc123")
 
     # Research (costs credits)
-    r = v.research("When RSI drops below 25 on ES, is there a bounce?")
+    r = v.research("When RSI drops below 25 on SPY, is there a bounce?")
     r = v.research("test it", session_id=r.session_id)
 
     # Autonomous discovery (costs credits)
-    d = v.discover("mean reversion on futures")
+    d = v.discover("mean reversion on tech stocks")
 """
 
 from __future__ import annotations
@@ -132,11 +132,11 @@ class VARRD:
         Args:
             depth: 0 (free), 1 ($0.50), or 2 ($1/edge, $5/all).
             edge_id: Specific edge ID for detail. Omit for all edges.
-            market: Filter by market symbol (e.g. 'ES', 'GC').
+            market: Filter by market symbol (e.g. 'SPY', 'GLD').
             status: Filter: 'firing', 'pending', 'active'.
             direction: Filter: 'LONG' or 'SHORT'.
             timeframe: Filter: '60min', '120min', '240min', '360min', '480min', 'daily', 'weekly'.
-            asset_class: Filter: 'futures', 'equities', 'crypto'.
+            asset_class: Filter: 'equities', 'crypto'.
             section: Drill-down after depth=2 purchase (free):
                 setup_code, horizons, analytics, occurrences, view.
 
@@ -170,7 +170,7 @@ class VARRD:
         """Scan saved strategies against current market data.
 
         Args:
-            market: Filter by market symbol (e.g. 'ES', 'NQ').
+            market: Filter by market symbol (e.g. 'SPY', 'QQQ').
             only_firing: Only return strategies firing right now.
 
         Returns:
@@ -276,7 +276,7 @@ class VARRD:
         session_id to continue the conversation.
 
         Typical flow:
-            r = v.research("When RSI < 25 on ES, is there a bounce?")
+            r = v.research("When RSI < 25 on SPY, is there a bounce?")
             r = v.research("test it", session_id=r.session_id)
             r = v.research("show me the trade setup", session_id=r.session_id)
 
@@ -311,11 +311,11 @@ class VARRD:
         if an edge is found. Each call tests ONE hypothesis.
 
         Args:
-            topic: Research topic (e.g. 'momentum on grains').
-            markets: Focus markets (e.g. ['ES', 'NQ']). Omit for auto.
+            topic: Research topic (e.g. 'momentum on semiconductors').
+            markets: Focus markets (e.g. ['SPY', 'QQQ']). Omit for auto.
             test_type: 'event_study', 'backtest', or 'both'.
             search_mode: 'focused' (stay close) or 'explore' (creative).
-            asset_classes: Limit to 'crypto', 'futures', 'equities'.
+            asset_classes: Limit to 'crypto', 'equities'.
 
         Returns:
             DiscoverResult with edge verdict and trade setup.

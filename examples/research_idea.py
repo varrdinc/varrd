@@ -11,7 +11,7 @@ from varrd import VARRD
 v = VARRD()
 
 # Start with an idea
-idea = "When RSI drops below 25 on ES, is there a bounce within 5 days?"
+idea = "When RSI drops below 25 on SPY, is there a bounce within 5 days?"
 print(f"Researching: {idea}\n")
 
 session_id = None

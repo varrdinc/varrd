@@ -3,10 +3,10 @@
 Usage:
     varrd balance
     varrd buy-credits [--amount 500] [--confirm <payment_intent_id>]
-    varrd scan [--market ES] [--only-firing]
+    varrd scan [--market SPY] [--only-firing]
     varrd search "momentum strategies" [--limit 10]
-    varrd research "When RSI drops below 25 on ES, is there a bounce?"
-    varrd discover "mean reversion on futures" [--mode explore]
+    varrd research "When RSI drops below 25 on SPY, is there a bounce?"
+    varrd discover "mean reversion on tech stocks" [--mode explore]
     varrd hypothesis <id>
     varrd reset <session_id>
     varrd auth status
@@ -294,7 +294,7 @@ def _print_welcome():
   {BOLD}Quick start:{RESET}
     varrd edges                         What's firing right now (free)
     varrd edges --depth 1               Stats + trade levels ($0.50)
-    varrd research "RSI < 25 on ES"     Test your own trading idea
+    varrd research "RSI < 25 on SPY"    Test your own trading idea
     varrd discover "mean reversion"     Let VARRD find edges for you
     varrd briefing                      Personalized market news
 
