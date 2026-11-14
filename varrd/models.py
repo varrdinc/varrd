@@ -175,6 +175,11 @@ class BalanceResult(BaseModel):
     lifetime_added_cents: int | None = None
     enforcement_enabled: bool = False
     credit_packs: list[CreditPack] = Field(default_factory=list)
+    # Per-test pricing (server 1.1.0+). None on an older server or when the server sends no quote.
+    tests_remaining: int | None = None
+    tests_included_remaining: int | None = None
+    test_price_cents: int | None = None
+    plan: str | None = None
 
 
 # ---------------------------------------------------------------------------
